@@ -10,9 +10,9 @@ import {login} from '@auth-org/auth-store';
     styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {
-
+    /* Store Subscription */
     constructor(private store: Store<any>) {}
-
+    /* login methid that dispatches the login action */
     login(userName: string) {
       alert(userName);
         this.store.dispatch(login({userName}));

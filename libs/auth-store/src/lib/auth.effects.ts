@@ -12,6 +12,7 @@ export class AuthEffects {
     // Here we would do some HTTP API requests
     login$ = createEffect(() => this.actions$.pipe(
         ofType(AuthActions.login),
+        /* HTTP Calls */
         map((action) => AuthActions.loginSuccess({userName: action.userName}))
     ));
 

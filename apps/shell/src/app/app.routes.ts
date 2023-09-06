@@ -14,6 +14,7 @@ export const appRoutes: Route[] = [
     // Lazy loaded local module
     loadChildren: () => import('./login/login-route.module').then(m => m.LoginRouteModule)
 },
+/* GUarded Route */
 {
     path: 'employeeslist',
     canActivate: [AuthGuard],
